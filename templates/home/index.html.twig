@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+
+
+
+{% for utilisateur in utilisateurs %}
+
+    <div class ="container">
+    <div calss = "center">
+    <img class="image" src="{{asset('build/images/image1.bf00ea54.jpg')}}" alt=""> </div>
+    <div class= "left">
+    <h2> Etat Civil </h2>
+    <p class="etat"> Nom : {{utilisateur.nom}} </p>
+
+    <p class="etat"> Prénom : {{utilisateur.prenom}}</p>
+
+    <p class="etat"> Age : {{utilisateur.age}}</p>
+
+    <p class="etat"> Hobbies: {{utilisateur.hobbie}}</p>
+
+    <p class="etat"> Contact:{{utilisateur.contact}}</p>
+     
+    <p class="etat"> Adresse:{{utilisateur.adresse}}</p>  
+    </div>
+
+    <div class = "right">
+            <h2> Me présenter En quels Mots </h2>
+        <p class="presentation">{{utilisateur.presentation}}</p>  
+    </div>
+
+     <div>
+
+        <h2> A propos </h2>
+        <p class= "propos"> ce blog à pour but de mettre en avant mes projets
+            informatique réalisés depuis 2ans. ces projets tournent au tour de la programmation 
+            informatique en usant des framwork tels que symfony, Angular ou encore des langages de programmation </p>
+            </div>
+    
+</div>
+        
+        {% endfor %}
+       
+    
+{% endblock %}
