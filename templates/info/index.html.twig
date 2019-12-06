@@ -9,9 +9,9 @@
 
 <div>
 
-    <h1 class ="article_titre"> Liste des articles </h1>
+    
     <h2 class ="etat_article"> Nom: {{utilisateur.nom|capitalize}}  Prenom: {{utilisateur.prenom}} </h2>
-
+    <h1 class ="article_titre"> Liste des articles </h1>
     {% for articles in utilisateur.articles %}
     <h2> Titre: {{articles.titre}}</h2>
     <h2> Année de parrution: {{articles.annee | date('d/m/Y')}}</h2>

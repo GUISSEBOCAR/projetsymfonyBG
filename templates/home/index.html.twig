@@ -4,15 +4,18 @@
 
 {% block body %}
 
+<div> 
+    <h1 class = "bienvenue"> Bienvenue dans mon Blog </h1>
+
 
 
 {% for utilisateur in utilisateurs %}
 
     <div class ="container">
     <div calss = "center">
-    <img class="image" src="{{asset('build/images/image1.bf00ea54.jpg')}}" alt=""> </div>
+    <img class="image" src="{{asset('build/images/image2.66669066.jpg')}}" alt=""> </div>
     <div class= "left">
-    <h2> Etat Civil </h2>
+    <h1> Etat Civil </h1>
     <p class="etat"> Nom : {{utilisateur.nom}} </p>
 
     <p class="etat"> Prénom : {{utilisateur.prenom}}</p>
@@ -27,22 +30,27 @@
     </div>
 
     <div class = "right">
-            <h2> Me présenter En quels Mots </h2>
+            <h1> Me présenter En quels Mots </h1>
         <p class="presentation">{{utilisateur.presentation}}</p>  
     </div>
+     {% endfor %}
+
+ 
 
      <div>
 
-        <h2> A propos </h2>
+        <h1> A propos </h1>
         <p class= "propos"> ce blog à pour but de mettre en avant mes projets
             informatique réalisés depuis 2ans. ces projets tournent au tour de la programmation 
             informatique en usant des framwork tels que symfony, Angular ou encore des langages de programmation comme java etc.
-             </p>
+            Si vous aimer le partage et l'entre-aide, n'hèsiter pas à proposer vos articles ("code source") à fin
+            que les personnes qui en ont besoin puissent y tirer profil!!! 
+        </p>
             </div>
     
-</div>
+    </div>
         
-        {% endfor %}
+      
        
     
 {% endblock %}

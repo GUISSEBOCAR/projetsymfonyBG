@@ -30,7 +30,7 @@ Encore
     .addEntry('globalJS', './assets/global/js/app.js')
  
     .addStyleEntry('globalStyle', './assets/global/scss/import.scss')
-    .addEntry('image', './assets/images/images.jpg')
+    .addEntry('image', './assets/images/image2.jpg')
     .addEntry('image1', './assets/images/image1.jpg')
     
     //.addEntry('page2', './assets/js/page2.js')

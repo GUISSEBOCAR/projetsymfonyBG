@@ -26,7 +26,7 @@ class UtilisateurFixture extends Fixture
             avec ce master. à l'heure ou vous lisez mon blog sachez que je suis à la recherche d'un stage de fin d'étude a fin de 
             d'intégrer le marché de l'emploi et apporté ma pierre à l'édiffice dans ce domaine.
             je vais donc vous presenter mon site internet qui est réalisé avec le langage symfony")
-            ->setHobbie("Football")
+            ->setHobbie("Lecture, Sport")
             ->setContact("carbomamene@hotmail.fr");
             $manager->persist($utilisateur);
 
@@ -59,7 +59,7 @@ class UtilisateurFixture extends Fixture
 
             /// creation de articel 3
             $article2 = new Article();
-            $article2->setTitre("Projet Syfony")
+            $article2->setTitre("Projet Symfony")
                      ->setDescription("Dans le cadre de notre cours Programmation avancé nous avons eu à dévelloper un petit blog
                                         en utilisant le framwork symfony. pour se faire nous avons creait deux pages; une etant la page 
                                         d'accueil et l'autre la page ou se trouve nos articles.
