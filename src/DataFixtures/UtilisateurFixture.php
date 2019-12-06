@@ -9,7 +9,8 @@ use\App\Entity\Article;
 class UtilisateurFixture extends Fixture
 {
     public function load(ObjectManager $manager)
-    {
+    {   
+        // création d'un utilisateur
         $utilisateur = new Utilisateur();
         $utilisateur->setNom("Guisse")
         ->setPrenom("Bocar")
@@ -31,25 +32,45 @@ class UtilisateurFixture extends Fixture
 
 
 
-        
+            // creation de articel 1
             $article = new Article();
             $article->setTitre("Projet JEE ")
-                    ->setDescription("Ceci est un projet développé dont l'objectif est de mettre une application de gestion de projet. la téchnologie utilisée etant JEE ")
+                    ->setDescription("Ceci est un projet développé en java dont l'objectif est de mettre une 
+                                        application de gestion des monuments; la téchnologie utilisée est java JEE.
+                                        avec ce projet nous avons dévellopé une application qui permet de gerer de monuments situés en france 
+                                        par département. En cliquant ce lien ci dessous, vous aurez accés au code source situé sur
+                                        github ")
                     ->setAnnee(new \DateTime())
                     ->setUtilisateur($utilisateur)
                     ->setLien("https://github.com/GUISSEBOCAR/JEEProjetMonument");
 
                     $manager->persist($article);
 
+            // creation de articel 2
             $article1 = new Article();
             $article1->setTitre("Projet Angular")
-                     ->setDescription("Ce projet réalisé avec le framwork angular avait pour Objectif de developper une application de vente en ligne")
+                     ->setDescription("Dans le cadre de notre cours Téchno Avancé nous avons réalisé avec le framwork angular  un projet dont l'bjectif est
+                                       de developper une application de vente en ligne" )
+                     
                      ->setAnnee(new \DateTime())
                      ->setUtilisateur($utilisateur)
-                     ->setLien("https://github.com/GUISSEBOCAR/JEEProjetMonument");
-
-
+                     ->setLien("https://github.com/GUISSEBOCAR/prjetAngular");
                      $manager->persist($article1);
+
+            /// creation de articel 3
+            $article2 = new Article();
+            $article2->setTitre("Projet Syfony")
+                     ->setDescription("Dans le cadre de notre cours Programmation avancé nous avons eu à dévelloper un petit blog
+                                        en utilisant le framwork symfony. pour se faire nous avons creait deux pages; une etant la page 
+                                        d'accueil et l'autre la page ou se trouve nos articles.
+                                        dans ce blog les données sont stockées dans uns base de donnée et on est passé par les fixtures de symfony pour persister nos données dans la base.
+                                        pour visuliser le code source, merci de cliquer le lien ci déssous ")
+                     ->setAnnee(new \DateTime())
+                     ->setUtilisateur($utilisateur)
+                     ->setLien("https://github.com/GUISSEBOCAR/projetsymfonyBG");
+
+
+                     $manager->persist($article2);
 
 
         $manager->flush();

@@ -4,16 +4,19 @@
 
 {% block body %}
 
+
 {%for utilisateur in utilisateurs%}
+
 <div>
-    
-    <p> Nom: {{utilisateur.nom|capitalize}}  Prenom: {{utilisateur.prenom}} </p>
+
+    <h1 class ="article_titre"> Liste des articles </h1>
+    <h2 class ="etat_article"> Nom: {{utilisateur.nom|capitalize}}  Prenom: {{utilisateur.prenom}} </h2>
 
     {% for articles in utilisateur.articles %}
     <h2> Titre: {{articles.titre}}</h2>
     <h2> Année de parrution: {{articles.annee | date('d/m/Y')}}</h2>
     <h2 class="description"> Description: {{articles.description}}</h2>
-    <p><a href="{{articles.lien}}">pour visualiser le code</a></p>
+   <li><p class="lien"><a href="{{articles.lien}}">pour visualiser le code</a></p></li>
 
 {% endfor %}
 </div>
